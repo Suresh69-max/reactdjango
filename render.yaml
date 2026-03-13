@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: grocery-bud
+    runtime: python3
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn --bind 0.0.0.0:$PORT backend.wsgi:application"
